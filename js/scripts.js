@@ -12,6 +12,16 @@
 
 (function ($) {
 
+    if($(window).width() > 768) {
+        $('#menu').css({
+            "background-color" : "transparent",
+            "box-shadow" : "0 0 0"
+        })
+
+        $('header a').css({
+            "color" : "white"
+        })
+    }
 
 	// Remove no-js class
 	$('html').removeClass('no-js');
@@ -23,7 +33,7 @@
 		var scrollDistance = $(heading).offset().top;
 
 		$('html, body').animate({
-			scrollTop: scrollDistance + 'px'
+			scrollTop: (scrollDistance - 40) + 'px'
 		}, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
 
 		// Hide the menu once clicked if mobile
@@ -43,7 +53,7 @@
 	$('#lead-down span').click(function () {
 		var scrollDistance = $('#lead').next().offset().top;
 		$('html, body').animate({
-			scrollTop: scrollDistance + 'px'
+			scrollTop: scrollDistance+ 'px'
 		}, 500);
 	});
 
@@ -76,6 +86,11 @@
 	// Open mobile menu
 	$('#mobile-menu-open').click(function () {
 		$('header, body').addClass('active');
+
+		$('#menu').css({
+			"background": "white"
+		});
+
 	});
 
 	// Close mobile menu
@@ -98,6 +113,18 @@
 			$('header a').css({
 				"color": '#3498db'
 			})
+
+            // Change the links color
+			$('header a').mouseenter(function () {
+				$(this).css({
+					"color": '#3498db'
+				})
+			}).mouseleave(function () {
+				$(this).css({
+					"color": '#3498db'
+				})
+			})
+
 
 		} else {
 			$('#menu').css({
@@ -138,7 +165,7 @@
 				"color": '#3498db'
 			})
 
-	
+
 			// Change the links color
 			$('header a').mouseenter(function () {
 				$(this).css({
@@ -152,6 +179,8 @@
 
 
 		} else {
+			
+           
 			if ($(this).scrollTop() > a) {
 				$('#menu').css({
 					"background": "white",

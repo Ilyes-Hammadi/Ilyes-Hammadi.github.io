@@ -615,8 +615,8 @@ footer {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	margin-left: 300px;
-	padding: 15px;
+	margin-left: 400px;
+	padding: 30px;
 	h3 {
 		font-size: 1.5em;
 		font-weight: 300;
@@ -785,11 +785,9 @@ footer {
 		animation: none;
 		bottom: 0;
 		height: 100%;
-
-
-        a {
-            color: $base-color;
-        }
+		a {
+			color: $base-color;
+		}
 	}
 	#mobile-menu-open,
 	#mobile-menu-close {
@@ -802,17 +800,16 @@ footer {
 		border-radius: 0;
 		width: 100%;
 		text-align: center;
-        background-color: white;
-        margin-top: 44px;
+		background-color: white;
+		margin-top: 44px;
 		li {
 			display: block;
 			margin-bottom: 10px;
 		}
 	}
-
-    a {
-        color: $base-color;
-    }
+	a {
+		color: $base-color;
+	}
 	#lead-content {
 		h1 {
 			font-size: 2em;
@@ -874,18 +871,42 @@ footer {
 	z-index: 1;
 }
 
-@media only screen and (min-width: 769px) {
-
-    #menu {
-        background-color: transparent;
-        box-shadow: 0 0 0;
-    }
-
-    header {
-        a {
-            color: white;
-        }
-        
-    }
-
+.vtimeline-block {
+	ul {
+		padding-left: 15px;
+		li {
+			color: $text;
+			font-size: 0.9em;
+			margin: 0;
+		}
+	}
 }
+
+// Featured Work Section
+.project-image {
+	height: 300px;
+	width: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.project:nth-child(1) .project-image {
+	background-image: url(../images/helpJS.png);
+	background-position-x: -75px;
+}
+
+.project:nth-child(2) .project-image {
+	background-image: url(../images/omnifood.png);
+    background-position-x: -40px;
+}
+
+.project:nth-child(3) .project-image {
+	background-image: url(../images/djangostagram.png);
+    background-position-x: -75px;
+}
+
+.project:nth-child(4) .project-image {
+	background-image: url(../images/night-life.png);
+    background-position-x: -40px;
+}
+
