@@ -21,6 +21,18 @@
 		$('header a').css({
 			"color": "white"
 		})
+
+		// Change the links color
+		$('header a').mouseenter(function () {
+			$(this).css({
+				"color": '#3498db'
+			})
+		}).mouseleave(function () {
+			$(this).css({
+				"color": 'white'
+			})
+		})
+
 	}
 
 	// Remove no-js class
@@ -95,6 +107,11 @@
 			"color": '#3498db'
 		})
 
+        // Remove logo
+        $('#logo').css({
+            'display' : 'none'
+        })
+
 		// Change the links color
 		$('header a').mouseenter(function () {
 			$(this).css({
@@ -112,6 +129,11 @@
 	// Close mobile menu
 	$('#mobile-menu-close').click(function () {
 		$('header, body').removeClass('active');
+
+        // Restore logo
+        $('#logo').css({
+            'display' : 'inline-block'
+        })
 	});
 
 
