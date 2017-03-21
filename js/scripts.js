@@ -12,16 +12,16 @@
 
 (function ($) {
 
-    if($(window).width() > 768) {
-        $('#menu').css({
-            "background-color" : "transparent",
-            "box-shadow" : "0 0 0"
-        })
+	if ($(window).width() > 768) {
+		$('#menu').css({
+			"background-color": "transparent",
+			"box-shadow": "0 0 0"
+		})
 
-        $('header a').css({
-            "color" : "white"
-        })
-    }
+		$('header a').css({
+			"color": "white"
+		})
+	}
 
 	// Remove no-js class
 	$('html').removeClass('no-js');
@@ -53,7 +53,7 @@
 	$('#lead-down span').click(function () {
 		var scrollDistance = $('#lead').next().offset().top;
 		$('html, body').animate({
-			scrollTop: scrollDistance+ 'px'
+			scrollTop: scrollDistance + 'px'
 		}, 500);
 	});
 
@@ -91,6 +91,22 @@
 			"background": "white"
 		});
 
+		$('header a').css({
+			"color": '#3498db'
+		})
+
+		// Change the links color
+		$('header a').mouseenter(function () {
+			$(this).css({
+				"color": '#3498db'
+			})
+		}).mouseleave(function () {
+			$(this).css({
+				"color": '#3498db'
+			})
+		})
+
+
 	});
 
 	// Close mobile menu
@@ -114,7 +130,7 @@
 				"color": '#3498db'
 			})
 
-            // Change the links color
+			// Change the links color
 			$('header a').mouseenter(function () {
 				$(this).css({
 					"color": '#3498db'
@@ -179,8 +195,8 @@
 
 
 		} else {
-			
-           
+
+
 			if ($(this).scrollTop() > a) {
 				$('#menu').css({
 					"background": "white",
