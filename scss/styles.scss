@@ -422,6 +422,9 @@ footer {
 	p {
 		color: $text;
 		margin: 0;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 1.6;
 	}
 }
 
@@ -629,6 +632,14 @@ footer {
 	}
 }
 
+#view-more-projects {
+	text-decoration: none;
+	i {
+		vertical-align: sub;
+		margin-right: 8px;
+	}
+}
+
 
 /*
     -------------------------------
@@ -669,7 +680,7 @@ footer {
 */
 
 #contact {
-	padding: 50px 15px;
+	padding: 0px 15px;
 	background: $base-color;
 	text-align: center;
 	h2 {
@@ -679,9 +690,43 @@ footer {
 	}
 }
 
+#map-container {
+	height: 450px;
+	overflow: auto;
+}
+
+#map {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(rgba(36, 108, 156, 0.75), rgba(36, 108, 156, 0.75)), url(../images/map.png);
+	background-size: cover;
+}
+
+#contact-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	h3 {
+		font-size: 2em;
+		font-weight: 300;
+		color: white;
+		margin: 0;
+	}
+	h4 {
+		font-size: 1.3em;
+		font-weight: 300;
+		color: white;
+		margin: 0;
+	}
+}
+
 #contact-form {
-	max-width: 500px;
-	margin: 0 auto;
+	// max-width: 500px;
+	margin: 0 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 	input,
 	textarea {
 		display: block;
@@ -689,7 +734,7 @@ footer {
 		padding: 10px;
 		border-radius: 4px;
 		border: none;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
 		background: #246c9c;
 		color: #fff;
 		border: 1px solid #246c9c;
@@ -703,7 +748,7 @@ footer {
 		}
 	}
 	textarea {
-		height: 150px;
+		height: 175px;
 		resize: none;
 	}
 	button {
@@ -788,8 +833,6 @@ footer {
 			color: $base-color;
 		}
 	}
-
-
 	#mobile-menu-open,
 	#mobile-menu-close {
 		display: block;
@@ -925,4 +968,12 @@ footer {
 .project:nth-child(4) .project-image {
 	background-image: url(../images/night-life.png);
 	background-position-x: -40px;
+}
+
+.box {
+	padding: 0;
+}
+
+.box:last-child {
+	margin: 30px auto;
 }
