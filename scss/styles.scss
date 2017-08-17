@@ -956,16 +956,21 @@ footer {
 }
 
 .project:nth-child(2) .project-image {
+	background-image: url(../images/helpJS.png);
+	background-position-x: -75px;
+}
+
+.project:nth-child(3) .project-image {
 	background-image: url(../images/omnifood.png);
 	background-position-x: -40px;
 }
 
-.project:nth-child(3) .project-image {
+.project:nth-child(4) .project-image {
 	background-image: url(../images/djangostagram.png);
 	background-position-x: -75px;
 }
 
-.project:nth-child(4) .project-image {
+.project:nth-child(5) .project-image {
 	background-image: url(../images/night-life.png);
 	background-position-x: -40px;
 }
